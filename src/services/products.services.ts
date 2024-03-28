@@ -5,6 +5,7 @@ export const fetchProducts = async (): Promise<Product[] | undefined> => {
   try {
     const res = await fetch(
       `${process.env.FAKE_API_BASE_URL}/products?offset=0&limit=10`,
+      { next: { revalidate: 3600 } },
     );
     return res.json();
   } catch (error) {
