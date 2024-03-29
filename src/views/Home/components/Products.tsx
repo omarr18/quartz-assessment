@@ -10,7 +10,7 @@ export default function Products({ products }: { products: Product[] }) {
       {products.map((product: Product) => (
         <Card
           key={product.id}
-          className="max-w-[350px] pb-12 relative mx-auto shadow rounded-md bg-gray-800 flex flex-col"
+          className="max-w-[350px] pb-12 relative mx-auto md:mx-[unset] shadow rounded-md bg-gray-800 flex flex-col"
           renderImage={() => (
             <Image
               className=" rounded-t-md"

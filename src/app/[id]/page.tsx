@@ -9,7 +9,7 @@ export default async function page({ params }: { params: { id: string } }) {
       {product?.id ? (
         <div className="flex flex-col md:flex-row gap-4">
           <Image
-            src={product?.images[1]}
+            src={product?.images[0]}
             alt="product image"
             width={500}
             height={500}
